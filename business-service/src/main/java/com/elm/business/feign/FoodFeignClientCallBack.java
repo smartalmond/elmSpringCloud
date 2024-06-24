@@ -1,6 +1,6 @@
-package com.ynu.elm.feign;
+package com.elm.business.feign;
 
-import com.ynu.elm.po.CommonResult;
+import com.elm.business.po.CommonResult;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

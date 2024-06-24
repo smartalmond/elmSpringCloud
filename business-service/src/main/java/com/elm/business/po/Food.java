@@ -1,4 +1,4 @@
-package com.ynu.elm.po;
+package com.elm.business.po;
 
 import lombok.Data;
 import javax.persistence.*;

@@ -1,6 +1,6 @@
-package com.ynu.elm.feign;
+package com.elm.business.feign;
 
-import com.ynu.elm.po.CommonResult;
+import com.elm.business.po.CommonResult;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;

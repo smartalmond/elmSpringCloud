@@ -1,14 +1,9 @@
-package com.ynu.elm.controller;
+package com.elm.business.controller;
 
-import com.ynu.elm.feign.FoodFeignClient;
-import com.ynu.elm.po.Business;
-import com.ynu.elm.po.CommonResult;
-import com.ynu.elm.service.BusinessService;
+import com.elm.business.po.Business;
+import com.elm.business.service.BusinessService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController

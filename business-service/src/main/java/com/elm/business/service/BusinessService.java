@@ -1,6 +1,6 @@
-package com.ynu.elm.service;
+package com.elm.business.service;
 
-import com.ynu.elm.po.Business;
+import com.elm.business.po.Business;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
-package com.ynu.elm.mapper;
+package com.elm.business.mapper;
 
-import com.ynu.elm.po.Business;
+import com.elm.business.po.Business;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
 

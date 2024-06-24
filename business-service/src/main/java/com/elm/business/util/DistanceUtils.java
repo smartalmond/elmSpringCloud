@@ -1,4 +1,4 @@
-package com.ynu.elm.util;
+package com.elm.business.util;
 
 import java.util.HashMap;
 import java.util.Map;
