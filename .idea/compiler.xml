@@ -9,6 +9,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="cart-service" />
         <module name="elm-api" />
+        <module name="elm-gateway" />
         <module name="eureka-server-9000" />
         <module name="business-service" />
         <module name="food-service" />
@@ -20,15 +21,15 @@
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="business-service" options="-parameters" />
-      <module name="cart-service" options="-parameters" />
+      <module name="business-service" options="" />
+      <module name="cart-service" options="" />
       <module name="elm" options="" />
-      <module name="elm-api" options="-parameters" />
-      <module name="eureka-server-9000" options="-parameters" />
-      <module name="eureka-server-9001" options="-parameters" />
-      <module name="food-service" options="-parameters" />
-      <module name="order-service" options="-parameters" />
-      <module name="user-service" options="-parameters" />
+      <module name="elm-api" options="" />
+      <module name="eureka-server-9000" options="" />
+      <module name="eureka-server-9001" options="" />
+      <module name="food-service" options="" />
+      <module name="order-service" options="" />
+      <module name="user-service" options="" />
     </option>
   </component>
 </project>
