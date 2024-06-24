@@ -8,7 +8,7 @@
     <artifactId>elmSpringCloud</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>user_server_12000</module>
+<!--        <module>user_server_12000</module>
         <module>food_server_11700</module>
         <module>business_server_11100</module>
         <module>cart_server_11200</module>
@@ -19,7 +19,16 @@
         <module>gateway_server_11800</module>
         <module>config_server_11400</module>
         <module>comments_server_11300</module>
-        <module>credit_server_11500</module>
+        <module>credit_server_11500</module>-->
+        <module>business-service</module>
+        <module>cart-service</module>
+        <module>elm-api</module>
+        <module>elm-gateway</module>
+        <module>eureka-server-9000</module>
+        <module>eureka-server-9001</module>
+        <module>food-service</module>
+        <module>order-service</module>
+        <module>user-service</module>
     </modules>
     <packaging>pom</packaging>
 
