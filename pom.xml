@@ -17,16 +17,17 @@
         <module>eureka_server_11000</module>
         <module>eureka_server_11001</module>
         <module>gateway_server_11800</module>
-        <module>config_server_11400</module>
+
         <module>comments_server_11300</module>
         <module>credit_server_11500</module>-->
-        <module>business-service</module>
-        <module>cart-service</module>
+        <module>config_service_11400</module>
+        <module>business_server_10003</module>
+        <module>cart_service_10002</module>
         <module>elm-api</module>
         <module>elm-gateway</module>
         <module>eureka-server-9000</module>
         <module>eureka-server-9001</module>
-        <module>food-service</module>
+        <module>food_service_10001</module>
         <module>order-service</module>
         <module>user-service</module>
     </modules>
@@ -44,20 +45,18 @@
     -->
     <dependencyManagement>
         <dependencies>
-            <!--boot 2.3.3 -->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
-                <version>2.3.3.RELEASE</version>
+                <version>2.5.0</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
 
-            <!--cloud hoxton.sr9 -->
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
-                <version>Hoxton.SR9</version>
+                <version>2023.0.2</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -82,23 +81,16 @@
                 <version>3.1.5</version>
                 <scope>test</scope>
             </dependency>
-            <dependency>
-                <groupId>com.baomidou</groupId>
-                <artifactId>mybatis-plus-boot-starter</artifactId>
-                <version>3.5.4.1</version>
-            </dependency>
-            <dependency>
-                <groupId>org.mybatis</groupId>
-                <artifactId>mybatis-spring</artifactId>
-                <version>3.0.3</version>
-            </dependency>
-
-
 <!--            <dependency>-->
-<!--                <groupId>org.slf4j</groupId>-->
-<!--                <artifactId>slf4j-api</artifactId>-->
-<!--                <version>2.0.9</version>-->
+<!--                <groupId>org.mybatis.spring.boot</groupId>-->
+<!--                <artifactId>mybatis-spring-boot-starter</artifactId>-->
+<!--                <version>3.0.3</version>-->
 <!--            </dependency>-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>2.1.0</version>
+            </dependency>
 
             <dependency>
                 <groupId>org.projectlombok</groupId>
