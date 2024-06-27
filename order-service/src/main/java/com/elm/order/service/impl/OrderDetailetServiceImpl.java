@@ -1,6 +1,5 @@
 package com.elm.order.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.elm.order.mapper.OrderDetailetMapper;
 import com.elm.order.pojo.OrderDetailet;
 import com.elm.order.service.OrderDetailetService;
@@ -21,8 +20,6 @@ public class OrderDetailetServiceImpl implements OrderDetailetService {
 
     @Override
     public List<OrderDetailet> listOrderDetailetByOrderId(Integer orderId) {
-        QueryWrapper<OrderDetailet> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("order_id", orderId);
-        return orderDetailetMapper.selectList(queryWrapper);
+        return orderDetailetMapper.listOrderDetailetByOrderId(orderId);
     }
 }

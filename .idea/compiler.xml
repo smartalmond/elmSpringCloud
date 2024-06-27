@@ -12,15 +12,27 @@
         <module name="elm-gateway" />
         <module name="eureka-server-9000" />
         <module name="food_service_10001" />
+        <module name="cart-service-10002" />
         <module name="eureka-server-9001" />
-        <module name="user-service" />
         <module name="order-service" />
+        <module name="user-service" />
         <module name="business_server_10003" />
         <module name="config_service_11400" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="business-service" target="1.8" />
+      <module name="business_server_11100" target="1.8" />
+      <module name="cart_server_11200" target="1.8" />
+      <module name="config_server_11400" target="1.8" />
+      <module name="credit_server_11500" target="1.8" />
+      <module name="deliveryaddress_server_11600" target="1.8" />
+      <module name="eureka_server_11000" target="1.8" />
+      <module name="eureka_server_11001" target="1.8" />
+      <module name="food_server_11700" target="1.8" />
+      <module name="gateway_server_11800" target="1.8" />
+      <module name="orders_server_11900" target="1.8" />
+      <module name="user_server_12000" target="1.8" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">

@@ -14,13 +14,13 @@ public class BusinessController {
     private BusinessService businessService;
 
     @RequestMapping("/listBusinessByOrderTypeId")
-    public List<Business> listBusinessByOrderTypeId(@RequestBody Business business) throws Exception{
-        return businessService.listBusinessByOrderTypeId(business.getOrderTypeId());
+    public List<Business> listBusinessByOrderTypeId(@RequestParam Integer orderTypeId) throws Exception{
+        return businessService.listBusinessByOrderTypeId(orderTypeId);
     }
 
     @RequestMapping("/getBusinessById")
-    public Business getBusinessById(@RequestBody Business business) throws Exception{
-        return businessService.getBusinessById(business.getBusinessId());
+    public Business getBusinessById(@RequestParam Integer businessId) throws Exception{
+        return businessService.getBusinessById(businessId);
     }
 
     @RequestMapping("/ListBusinessByNum")

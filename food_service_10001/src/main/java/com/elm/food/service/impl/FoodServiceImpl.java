@@ -1,6 +1,5 @@
 package com.elm.food.service.impl;
 
-import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.elm.food.mapper.FoodMapper;
 import com.elm.food.pojo.Food;
 import com.elm.food.service.FoodService;
@@ -16,13 +15,11 @@ public class FoodServiceImpl implements FoodService {
 
     @Override
     public List<Food> listFoodByBusinessId(Integer businessId) {
-        QueryWrapper<Food> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("business_id", businessId);
-        return foodMapper.selectList(queryWrapper);
+        return foodMapper.listFoodByBusinessId(businessId);
     }
 
     @Override
     public Food getFoodById(Integer foodId) {
-        return foodMapper.selectById(foodId);
+        return foodMapper.getFoodById(foodId);
     }
 }

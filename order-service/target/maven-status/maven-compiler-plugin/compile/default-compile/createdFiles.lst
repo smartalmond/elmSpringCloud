@@ -1,0 +1,15 @@
+com\elm\order\pojo\OrderDetailet.class
+com\elm\order\controller\OrderDetailetController.class
+com\elm\order\util\CommonUtil.class
+com\elm\order\pojo\Orders.class
+com\elm\order\OrderApplication.class
+com\elm\order\feign\CartFeignClient.class
+com\elm\order\service\OrderDetailetService.class
+com\elm\order\service\OrdersService.class
+com\elm\order\service\impl\OrderDetailetServiceImpl.class
+com\elm\order\controller\OrdersController.class
+com\elm\order\mapper\OrderDetailetMapper.class
+com\elm\order\service\impl\OrdersServiceImpl.class
+com\elm\order\mapper\OrdersMapper.class
+com\elm\order\pojo\Cart.class
+com\elm\order\pojo\CommonResult.class

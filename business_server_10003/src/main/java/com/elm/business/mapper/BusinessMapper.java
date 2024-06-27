@@ -3,12 +3,11 @@ package com.elm.business.mapper;
 import com.elm.business.po.Business;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Select;
-import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import java.util.List;
 import java.util.Map;
 
 @Mapper
-public interface BusinessMapper extends BaseMapper<Business>{
+public interface BusinessMapper{
 
     //使用注解+xml结合的方式，简单的查询用注解，复杂查询、更新、插入操作写在xml映射文件中
 

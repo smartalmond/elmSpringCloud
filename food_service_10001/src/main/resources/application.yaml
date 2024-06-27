@@ -4,18 +4,14 @@ spring:
   application:
     name: food-service
   datasource:
-    url: jdbc:mysql://localhost:3306/elm-food?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
+    url: jdbc:mysql://localhost:3306/elm?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: 175175
+    password: rx2003414
 
-mybatis-plus:
-  configuration:
-    default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
-  global-config:
-    db-config:
-      update-strategy: not_null
-      id-type: auto
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.elm.food.pojo
 
 logging:
   level:
