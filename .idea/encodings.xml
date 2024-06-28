@@ -1,26 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://$PROJECT_DIR$/business_server_10003/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/business_server_10003/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business-service-10003/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/business-service-10003/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cart-service-10002/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/cart-service-10002/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cart_service_10002/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/cart_service_10002/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config_service_11400/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/config_service_11400/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/elm-api/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/elm-api/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/elm-common/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/elm-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/elm-gateway/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/elm-gateway/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server-9000/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server-9000/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server-9001/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/eureka-server-9001/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/food_service_10001/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/food_service_10001/src/main/resources" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/order-service/src/main/java" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/order-service/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/food-service-10001/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/food-service-10001/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-service-10005/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/order-service-10005/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user-service-10004/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/user-service-10004/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user-service/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/user-service/src/main/resources" charset="UTF-8" />
   </component>

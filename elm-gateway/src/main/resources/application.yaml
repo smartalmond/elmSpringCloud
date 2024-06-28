@@ -3,18 +3,33 @@ server:
 spring:
   application:
     name: gateway
-  #下面是关于gateway的配置
   cloud:
     gateway:
       routes:
+        - id: business-service
+          uri: lb://business-service
+          predicates:
+            - path=/BusinessController/**
+
         - id: food-service
           uri: lb://food-service
           predicates:
-            - Path=/FoodController/**
+            - path=/FoodController/**
+
+        - id: order-service
+          uri: lb://order-service
+          predicates:
+            - path=/OrdersController/**,/OrderDetailetController/**
+
         - id: cart-service
           uri: lb://cart-service
           predicates:
-            - Path=/CartController/**
+            - path=/CartController/**
+
+        - id: user-service
+          uri: lb://user-service
+          predicates:
+            - path=/UserController/**,/DeliveryAddressController/**
 
 #eureka配置
 eureka:
@@ -27,4 +42,14 @@ eureka:
     instance-id: ${spring.cloud.client.ip-address}:${server.port}  #设置eureka控制台中显示的注册信息
     lease-renewal-interval-in-seconds: 10  #续约间隔时间
     lease-expiration-duration-in-seconds: 30  #续约到期时间
+
+elm:
+  jwt:
+    location: classpath:elm.jks
+    alias: elm
+    password: hmall123
+    tokenTTL: 30m
+  auth:
+    excludePaths:
+      - /UserController/**
 
