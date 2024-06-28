@@ -12,15 +12,9 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.elm.order.pojo
-
-logging:
-  level:
-    com.elm: debug
-  pattern:
-    dateformat: HH:mm:ss:SSS
-  file:
-    path: "logs/${spring.application.name}"
-
+#logging:
+#  level:
+#    root: DEBUG
 #eureka配置
 eureka:
   client:

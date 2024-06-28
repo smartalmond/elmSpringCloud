@@ -9,28 +9,29 @@ spring:
         - id: business-service
           uri: lb://business-service
           predicates:
-            - path=/BusinessController/**
+            - Path=/BusinessController/**
 
         - id: food-service
           uri: lb://food-service
           predicates:
-            - path=/FoodController/**
+            - Path=/FoodController/**
 
         - id: order-service
           uri: lb://order-service
           predicates:
-            - path=/OrdersController/**,/OrderDetailetController/**
+            - Path=/OrdersController/**,/OrderDetailetController/**
 
         - id: cart-service
           uri: lb://cart-service
           predicates:
-            - path=/CartController/**
+            - Path=/CartController/**
 
         - id: user-service
           uri: lb://user-service
           predicates:
-            - path=/UserController/**,/DeliveryAddressController/**
-
+            - Path=/UserController/**,/DeliveryAddressController/**
+#  main:
+#    web-application-type: reactive
 #eureka配置
 eureka:
   client:

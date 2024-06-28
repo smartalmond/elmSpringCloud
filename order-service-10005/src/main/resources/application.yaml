@@ -12,7 +12,9 @@ spring:
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.elm.order.pojo
-
+#logging:
+#  level:
+#    root: DEBUG
 #eureka配置
 eureka:
   client:
