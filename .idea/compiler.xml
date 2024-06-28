@@ -21,6 +21,7 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="business-service" target="1.8" />
+      <module name="business_server_10003" target="1.8" />
       <module name="business_server_11100" target="1.8" />
       <module name="cart_server_11200" target="1.8" />
       <module name="cart_service_10002" target="1.8" />
@@ -31,7 +32,9 @@
       <module name="eureka_server_11000" target="1.8" />
       <module name="eureka_server_11001" target="1.8" />
       <module name="food_server_11700" target="1.8" />
+      <module name="food_service_10001" target="1.8" />
       <module name="gateway_server_11800" target="1.8" />
+      <module name="order-service" target="1.8" />
       <module name="orders_server_11900" target="1.8" />
       <module name="user-service" target="1.8" />
       <module name="user_server_12000" target="1.8" />
