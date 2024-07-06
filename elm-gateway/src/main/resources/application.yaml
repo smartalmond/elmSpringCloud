@@ -5,6 +5,15 @@ spring:
     name: gateway
   cloud:
     gateway:
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods: "*"
+            allowedHeaders: "*"
+            allowCredentials: false
+            maxAge: 3600
+
       routes:
         - id: business-service
           uri: lb://business-service
@@ -29,9 +38,13 @@ spring:
         - id: user-service
           uri: lb://user-service
           predicates:
-            - Path=/UserController/**,/DeliveryAddressController/**
-#  main:
-#    web-application-type: reactive
+            - Path=/UserController/**
+
+        - id: deliveryaddress-service
+          uri: lb://deliveryaddress-service
+          predicates:
+            - Path=/DeliveryAddressController/**
+
 #eureka配置
 eureka:
   client:

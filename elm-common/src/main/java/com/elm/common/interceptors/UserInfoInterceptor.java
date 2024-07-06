@@ -13,7 +13,7 @@ public class UserInfoInterceptor implements HandlerInterceptor {
         String userInfo = request.getHeader("user-info");
         // 2.判断是否获取了用户，如果有，存入ThreadLocal
         if (StrUtil.isNotBlank(userInfo)) {
-            UserContext.setUser(Long.valueOf(userInfo));
+            UserContext.setUser(userInfo);
         }
         // 3.放行
         return true;

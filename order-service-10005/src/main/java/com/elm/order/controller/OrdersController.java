@@ -1,5 +1,6 @@
 package com.elm.order.controller;
 
+import com.elm.common.utils.UserContext;
 import com.elm.order.pojo.CommonResult;
 import com.elm.order.pojo.Orders;
 import com.elm.order.service.OrdersService;
@@ -16,11 +17,11 @@ public class OrdersController {
 
     @PostMapping("/createOrders")
     public CommonResult<Integer> createOrders(
-            @RequestParam("userId") String userId,
             @RequestParam("businessId") Integer businessId,
             @RequestParam("daId") Integer daId,
             @RequestParam("orderTotal") Double orderTotal) throws Exception {
         Orders orders = new Orders();
+        String userId = UserContext.getUser();
         orders.setUserId(userId);
         orders.setBusinessId(businessId);
         orders.setDaId(daId);
@@ -36,7 +37,8 @@ public class OrdersController {
     }
 
     @GetMapping("/listOrdersByUserId")
-    public CommonResult<List<Orders>> listOrdersByUserId(@RequestParam("userId") String userId) throws Exception {
+    public CommonResult<List<Orders>> listOrdersByUserId() throws Exception {
+        String userId = UserContext.getUser();
         List<Orders> list = ordersService.listOrdersByUserId(userId);
         return new CommonResult<>(200, "success", list);
     }

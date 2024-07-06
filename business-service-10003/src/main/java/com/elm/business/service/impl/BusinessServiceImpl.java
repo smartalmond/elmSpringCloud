@@ -3,12 +3,10 @@ package com.elm.business.service.impl;
 import com.elm.business.mapper.BusinessMapper;
 import com.elm.business.po.Business;
 import com.elm.business.service.BusinessService;
-import com.elm.business.util.DistanceUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class BusinessServiceImpl implements BusinessService {

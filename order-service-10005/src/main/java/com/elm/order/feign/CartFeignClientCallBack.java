@@ -2,7 +2,6 @@ package com.elm.order.feign;
 
 import com.elm.order.pojo.CommonResult;
 import org.springframework.stereotype.Component;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;

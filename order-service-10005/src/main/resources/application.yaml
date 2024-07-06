@@ -3,18 +3,20 @@ server:
 spring:
   application:
     name: order-service
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090  # sentinel的控制台地址
   datasource:
     url: jdbc:mysql://localhost:3306/elm?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: rx2003414
+    password: 175175
 
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.elm.order.pojo
-#logging:
-#  level:
-#    root: DEBUG
+
 #eureka配置
 eureka:
   client:
@@ -27,3 +29,6 @@ eureka:
     lease-renewal-interval-in-seconds: 10  #续约间隔时间
     lease-expiration-duration-in-seconds: 30  #续约到期时间
 
+feign:
+  sentinel:
+    enabled: true

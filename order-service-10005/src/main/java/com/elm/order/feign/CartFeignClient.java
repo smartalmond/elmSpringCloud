@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
 
-@FeignClient(name="cart-service-10002")
+@FeignClient(name="cart-service", fallback = CartFeignClientCallBack.class)
 public interface CartFeignClient {
     @GetMapping("/CartController/listCart2")
     @ResponseBody

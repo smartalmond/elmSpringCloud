@@ -11,13 +11,13 @@
     <name>springcloud</name>
     <description>springcloud</description>
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>17</java.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <spring-boot.version>3.1.6</spring-boot.version>
         <spring-cloud.version>2022.0.5</spring-cloud.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>20</maven.compiler.source>
+        <maven.compiler.target>20</maven.compiler.target>
 
         <spring-cloud-circuitbreaker.version>3.0.4</spring-cloud-circuitbreaker.version>
         <spring-cloud-bus.version>4.0.3</spring-cloud-bus.version>
@@ -47,10 +47,9 @@
         <module>eureka-server-9001</module>
         <module>food-service-10001</module>
         <module>order-service-10005</module>
-        <module>elm-api</module>
         <module>user-service-10004</module>
         <module>elm-common</module>
-        <module>deliveryaddress-server-10008</module>
+        <module>deliveryaddress-service-10008</module>
     </modules>
     <packaging>pom</packaging>
     <parent>
@@ -106,7 +105,6 @@
                 <version>3.1.6</version>
             </dependency>
 
-
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -160,13 +158,11 @@
                 <version>${spring-cloud-config.version}</version>
             </dependency>
 
-
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-core</artifactId>
                 <version>6.0.14</version>
             </dependency>
-
 
             <dependency>
                 <groupId>org.springframework</groupId>
@@ -181,13 +177,11 @@
                 <version>6.0.14</version>
             </dependency>
 
-
             <dependency>
                 <groupId>org.springframework.data</groupId>
                 <artifactId>spring-data-commons</artifactId>
                 <version>3.1.6</version>
             </dependency>
-
 
             <dependency>
                 <groupId>io.github.openfeign</groupId>
@@ -215,7 +209,6 @@
                 <version>3.8.0</version>
             </dependency>
 
-
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
@@ -233,8 +226,6 @@
                 <version>8.0.33</version>
             </dependency>
 
-
-
             <dependency>
                 <groupId>org.apache.shiro</groupId>
                 <artifactId>shiro-spring-boot-web-starter</artifactId>
@@ -246,7 +237,6 @@
                 <artifactId>jakarta.transaction-api</artifactId>
                 <version>2.0.1</version>
             </dependency>
-
 
             <dependency>
                 <groupId>com.fasterxml.jackson.datatype</groupId>
@@ -263,7 +253,6 @@
                 <artifactId>jackson-databind</artifactId>
                 <version>${com.fasterxml.jackson.version}</version>
             </dependency>
-
 
             <dependency>
                 <groupId>jakarta.servlet</groupId>

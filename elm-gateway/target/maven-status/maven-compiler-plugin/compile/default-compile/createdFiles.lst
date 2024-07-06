@@ -1,2 +1,7 @@
+com\elm\gateway\config\AuthProperties.class
 com\elm\gateway\filters\MyGlobalFilter.class
+com\elm\gateway\filters\AuthGlobalFilter.class
+com\elm\gateway\config\SecurityConfig.class
 com\elm\gateway\GateWayApplication.class
+com\elm\gateway\utils\JwtTool.class
+com\elm\gateway\config\JwtProperties.class

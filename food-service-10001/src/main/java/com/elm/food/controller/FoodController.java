@@ -21,6 +21,7 @@ public class FoodController {
         System.out.println(list);
         return new CommonResult(200, "success(200)", list);
     }
+
     @RequestMapping("/getFoodById")
     public Food getFoodById(Integer foodId){
         return foodService.getFoodById(foodId);

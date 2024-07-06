@@ -43,7 +43,7 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
             token = headers.get(0);
         }
         // 4.校验并解析token
-        Long userId = null;
+        String userId = null;
         try {
             userId = jwtTool.parseToken(token);
         } catch(UnauthorizedException e) {
@@ -53,7 +53,7 @@ public class AuthGlobalFilter implements GlobalFilter, Ordered {
             return response.setComplete();
         }
         // 5.传递用户信息
-        String userInfo = userId.toString();
+        String userInfo = userId;
         ServerWebExchange swe = exchange.mutate()
                 .request(builder -> builder.header("user-info", userInfo))
                 .build();

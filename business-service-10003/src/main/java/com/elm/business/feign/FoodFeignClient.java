@@ -11,5 +11,5 @@ import java.util.List;
 public interface FoodFeignClient {
 
     @GetMapping("/FoodController/listFoodByBusinessId")
-    public CommonResult<List> listFoodByBusinessId(@RequestParam("businessId") Integer businessId);
+    CommonResult<List> listFoodByBusinessId(@RequestParam("businessId") Integer businessId);
 }

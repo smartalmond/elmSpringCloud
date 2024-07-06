@@ -1,5 +1,6 @@
 package com.elm.order.service.impl;
 
+import com.elm.common.utils.UserContext;
 import com.elm.order.feign.CartFeignClient;
 import com.elm.order.mapper.OrderDetailetMapper;
 import com.elm.order.mapper.OrdersMapper;
@@ -35,15 +36,10 @@ public class OrdersServiceImpl implements OrdersService {
     public int createOrders(Orders orders) {
         //1、查询当前用户购物车中当前商家的所有食品
         CommonResult<List> cartList = csc.listCarts(orders.getUserId(), orders.getBusinessId());
-//        System.out.println(cartList.getResult());
         //2、创建订单（返回生成的订单编号）
         orders.setOrderDate(CommonUtil.getCurrentDate());
         ordersMapper.saveOrders(orders);
-//        System.out.println(orderId);
-//        System.out.println(">>>>>>>>>>>>>>");
-//        System.out.println(orders.getOrderId());
         int orderId = orders.getOrderId();
-//        int orderId = orders.getOrderId();
 
         //3、批量添加订单明细
         List<OrderDetailet> list = new ArrayList<>();
@@ -66,7 +62,7 @@ public class OrdersServiceImpl implements OrdersService {
         }
 
         //5、从购物车表中删除相关食品信息
-        csc.removeCart(orders.getUserId(), orders.getBusinessId(), null);
+        csc.removeCart(UserContext.getUser(), orders.getBusinessId(), null);
 
         return orderId;
     }

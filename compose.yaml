@@ -1,2 +1,112 @@
 version: '3.8'
 
+services:
+  eureka-server1:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: eureka1
+    ports:
+      - "9000:80"
+    environment:
+      - server.port=80
+      - eureka.instance.hostname=eureka
+      - eureka.client.serviceUrl.defaultZone=http://eureka2/eureka/
+
+
+  eureka-server2:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: eureka2
+    ports:
+      - "9001:80"
+    environment:
+      - server.port=80
+      - eureka.instance.hostname=eureka
+      - eureka.client.serviceUrl.defaultZone=http://eureka1/eureka/
+
+
+  business-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: business
+    ports:
+      - "10003:80"
+    environment:
+      - server.port=80
+      - eureka.client.serviceUrl.defaultZone=http://eureka1/eureka/,http://eureka2/eureka/
+
+
+  cart-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cart
+    ports:
+      - "10002:80"
+    environment:
+      - server.port=80
+      - eureka.client.serviceUrl.defaultZone=http://eureka1/eureka/,http://eureka2/eureka/
+
+
+  deliveryaddress-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: deliveryaddress
+    ports:
+      - "10008:80"
+    environment:
+      - server.port=80
+      - eureka.client.serviceUrl.defaultZone=http://eureka1/eureka/,http://eureka2/eureka/
+
+
+  elm-gateway:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: gateway
+    ports:
+      - "8080:80"
+    environment:
+      - server.port=80
+      - eureka.client.serviceUrl.defaultZone=http://eureka1/eureka/,http://eureka2/eureka/
+
+
+  food-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: food
+    ports:
+      - "10001:80"
+    environment:
+      - server.port=80
+      - eureka.client.serviceUrl.defaultZone=http://eureka1/eureka/,http://eureka2/eureka/
+
+
+  order-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: order
+    ports:
+      - "10005:80"
+    environment:
+      - server.port=80
+      - eureka.client.serviceUrl.defaultZone=http://eureka1/eureka/,http://eureka2/eureka/
+
+
+  user-service:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: user
+    ports:
+      - "10004:80"
+    environment:
+      - server.port=80
+      - eureka.client.serviceUrl.defaultZone=http://eureka1/eureka/,http://eureka2/eureka/
+

@@ -1,2 +1,7 @@
-E:\homework\softwareService\elmCloud\elm-gateway\src\main\java\com\elm\gateway\filters\MyGlobalFilter.java
-E:\homework\softwareService\elmCloud\elm-gateway\src\main\java\com\elm\gateway\GateWayApplication.java
+D:\elm\elmSpringCloud-main\elm-gateway\src\main\java\com\elm\gateway\utils\JwtTool.java
+D:\elm\elmSpringCloud-main\elm-gateway\src\main\java\com\elm\gateway\filters\MyGlobalFilter.java
+D:\elm\elmSpringCloud-main\elm-gateway\src\main\java\com\elm\gateway\GateWayApplication.java
+D:\elm\elmSpringCloud-main\elm-gateway\src\main\java\com\elm\gateway\config\SecurityConfig.java
+D:\elm\elmSpringCloud-main\elm-gateway\src\main\java\com\elm\gateway\config\JwtProperties.java
+D:\elm\elmSpringCloud-main\elm-gateway\src\main\java\com\elm\gateway\filters\AuthGlobalFilter.java
+D:\elm\elmSpringCloud-main\elm-gateway\src\main\java\com\elm\gateway\config\AuthProperties.java

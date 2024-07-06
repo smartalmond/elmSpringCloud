@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import java.util.List;
 
 @Component
-public class FoodFeignClientCallBack implements FoodFeignClient{
+public class FoodFeignClientCallBack implements FoodFeignClient {
     @Override
     public CommonResult<List> listFoodByBusinessId(Integer businessId) {
         // 返回降级响应

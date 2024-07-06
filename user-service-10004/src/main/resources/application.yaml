@@ -3,19 +3,19 @@ server:
 spring:
   application:
     name: user-service
+  cloud:
+    sentinel:
+      transport:
+        dashboard: localhost:8090  # sentinel的控制台地址
   datasource:
     url: jdbc:mysql://localhost:3306/elm?useUnicode=true&characterEncoding=UTF-8&autoReconnect=true&serverTimezone=Asia/Shanghai
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: rx2003414
+    password: 175175
 
-mybatis-plus:
-  configuration:
-    default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
-  global-config:
-    db-config:
-      update-strategy: not_null
-      id-type: auto
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.elm.user.pojo
 
 #eureka配置
 eureka:
@@ -35,3 +35,7 @@ elm:
     alias: elm
     password: hmall123
     tokenTTL: 30m
+
+feign:
+  sentinel:
+    enabled: true

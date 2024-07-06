@@ -7,9 +7,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 
-@FeignClient(name = "deliveryaddress-server", fallback = AddressFeignClientCallBack.class)
+@FeignClient(name = "deliveryaddress-service", fallback = AddressFeignClientCallBack.class)
 public interface AddressFeignClient {
 
     @GetMapping("/DeliveryAddressController/listDeliveryAddressByUserId")
-    public CommonResult<List> listDeliveryAddressByUserId(@RequestParam("userId") String userId);
+    CommonResult<List> listDeliveryAddressByUserId(@RequestParam("userId") String userId);
 }

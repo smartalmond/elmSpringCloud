@@ -2,6 +2,7 @@ package com.elm.cart.controller;
 
 import com.elm.cart.domain.pojo.*;
 import com.elm.cart.service.CartService;
+import com.elm.common.utils.UserContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,8 +15,9 @@ public class CartController {
     private CartService cartService;
 
     @GetMapping("/listCart1")
-    public CommonResult<List> listCart(@RequestParam("userId") String userId) throws Exception{
+    public CommonResult<List> listCart() throws Exception{
         Cart param = new Cart();
+        String userId = UserContext.getUser();
         param.setUserId(userId);
         param.setBusinessId(null);
         List<Cart> list = cartService.listCart(param);
@@ -25,9 +27,9 @@ public class CartController {
     @GetMapping("/listCart2")
     @ResponseBody
     public CommonResult<List> listCart(
-            @RequestParam("userId") String userId,
             @RequestParam("businessId") Integer businessId) throws Exception{
         Cart param = new Cart();
+        String userId = UserContext.getUser();
         param.setUserId(userId);
         param.setBusinessId(businessId);
         List<Cart> list = cartService.listCart(param);
@@ -36,10 +38,10 @@ public class CartController {
 
     @PostMapping("/saveCart")
     public CommonResult<Integer> saveCart(
-            @RequestParam("userId") String userId,
             @RequestParam("businessId") Integer businessId,
             @RequestParam("foodId") Integer foodId) throws Exception{
         Cart param = new Cart();
+        String userId = UserContext.getUser();
         param.setUserId(userId);
         param.setBusinessId(businessId);
         param.setFoodId(foodId);
@@ -49,11 +51,11 @@ public class CartController {
 
     @PutMapping("/updateCart")
     public CommonResult<Integer> updateCart(
-            @RequestParam("userId") String userId,
             @RequestParam("businessId") Integer businessId,
             @RequestParam("foodId") Integer foodId,
             @RequestParam("quantity") Integer quantity) throws Exception{
         Cart param = new Cart();
+        String userId = UserContext.getUser();
         param.setUserId(userId);
         param.setBusinessId(businessId);
         param.setFoodId(foodId);
@@ -64,7 +66,6 @@ public class CartController {
 
     @DeleteMapping("/removeCart")
     public CommonResult<Integer> removeCart(
-            @RequestParam("userId") String userId,
             @RequestParam("businessId") Integer businessId,
             @RequestParam(value = "foodId", required = false) String foodIdStr) throws Exception {
 
@@ -79,6 +80,7 @@ public class CartController {
         }
 
         Cart param = new Cart();
+        String userId = UserContext.getUser();
         param.setUserId(userId);
         param.setBusinessId(businessId);
         if (foodId != null) {

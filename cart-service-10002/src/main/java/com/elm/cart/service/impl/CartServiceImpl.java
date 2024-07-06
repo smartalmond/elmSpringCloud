@@ -4,12 +4,11 @@ import com.elm.cart.domain.DTO.CartParams;
 import com.elm.cart.mapper.CartMapper;
 import com.elm.cart.domain.pojo.Cart;
 import com.elm.cart.service.CartService;
+import com.elm.common.utils.UserContext;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 @Service
 public class CartServiceImpl implements CartService {
