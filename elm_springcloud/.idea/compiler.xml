@@ -50,7 +50,7 @@
       <module name="business-service-10003" options="-parameters" />
       <module name="cart-service-10002" options="-parameters" />
       <module name="cart_service_10002" options="" />
-      <module name="deliveryaddress-service-10008" options="" />
+      <module name="deliveryaddress-service-10008" options="-parameters" />
       <module name="elm" options="" />
       <module name="elm-api" options="-parameters" />
       <module name="elm-common" options="-parameters" />
